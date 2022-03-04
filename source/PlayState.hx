@@ -688,7 +688,7 @@ class PlayState extends MusicBeatState
                 #end*/
                     var alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
                     add(alanBG);
-                    alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
+                    var alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
                     add(alanBG);
                 case 'tdl':
                     /*#if PRELOAD_ALL			
