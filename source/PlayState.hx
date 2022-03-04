@@ -655,8 +655,8 @@ class PlayState extends MusicBeatState
 					bg.scale.set(6, 6);
 					bg.antialiasing = false;
 					add(bg);
-            	}
-            case 'alan':
+                }
+                case 'alan':
                     /*#if PRELOAD_ALL			
                     var images = [];
                     var xml = [];
@@ -688,102 +688,103 @@ class PlayState extends MusicBeatState
                 #end*/
                     var alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
                     add(alanBG);
-            case 'tdl':
-                        /*#if PRELOAD_ALL			
-                        var images = [];
-                        var xml = [];
-                        trace("caching images...");
-            
-                        for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters/animation/")))
-                        {
-                            if (!i.endsWith(".png"))
-                                continue;
-                            images.push(i);
-            
-                            if (!i.endsWith(".xml"))
-                                continue;
-                            xml.push(i);
-                        }
-                        for (i in images)
-                        {
-                            var replaced = i.replace(".png","");
-                            FlxG.bitmap.add(Paths.image("characters/animation/" + replaced,"shared"));
-                            trace("this is " + replaced);
-                        }
-                    
-                    for (i in xml)
-                        {
-                            var replaced = i.replace(".xml","");
-                            FlxG.bitmap.add(Paths.image("characters/animation/" + replaced,"shared"));
-                            trace("this is " + replaced);
-                        }
-                    #end*/
-                    
-                        var bg:BGSprite = new BGSprite('tdl_bg', 0, 0, 1, 1);
-				        bg.screenCenter();
-				        bg.x += 75;
-				        add(bg);
-          case 'animatedbg':
-
-                            /*var videos = [];
-                            trace("caching images...");
+                    alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
+                    add(alanBG);
+                case 'tdl':
+                    /*#if PRELOAD_ALL			
+                    var images = [];
+                    var xml = [];
+                    trace("caching images...");
+        
+                    for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters/animation/")))
+                    {
+                        if (!i.endsWith(".png"))
+                            continue;
+                        images.push(i);
+        
+                        if (!i.endsWith(".xml"))
+                            continue;
+                        xml.push(i);
+                    }
+                    for (i in images)
+                    {
+                        var replaced = i.replace(".png","");
+                        FlxG.bitmap.add(Paths.image("characters/animation/" + replaced,"shared"));
+                        trace("this is " + replaced);
+                    }
                 
-                            for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/videos/")))
-                            {
-                                if (!i.endsWith(".mp4"))
-                                    continue;
-                                videos.push(i);
-                            }
-                            for (i in videos)
-                            {
-                                var replaced = i.replace(".mp4","");
-                                FlxG.bitmap.add(Paths.video("assets/videos/" + replaced,"shared"));
-                                trace("this is " + replaced);
-                            }*/
-            
-                            var animatedbg:FlxSprite = new BGSprite('animatedbg', 620, 330, 0, 0);
-                            animatedbg.scale.set(2.7, 2.7);
-                            //animatedbg.screenCenter();
-                            animatedbg.y -= 350;
-                            animatedbg.x -= 600;
-                            add(animatedbg);
-                            remove(animatedbg);
-                            
-                            var video:MP4Handler = new MP4Handler();
-                            video.playMP4(Paths.video('animatedbg'), null, animatedbg, false, false, true);
-            
-                            if (animatedbgdisable == true)
-                            {
-                                var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
-                                animatedbg.scale.set(1.5, 1.5);
-                                animatedbg.screenCenter();
-                                add(animatedbg);
-                                remove(animatedbg);
-                            }
-            
-                            if(ClientPrefs.lowQuality) {
-                                var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
-                                animatedbg.scale.set(1.5, 1.5);
-                                animatedbg.screenCenter();
-                                add(animatedbg);
-                                remove(animatedbg);
-                            }
-                            
-                            add(animatedbg);
-            
-                            if(!ClientPrefs.lowQuality) {
-                                var backdudes:FlxSprite = new FlxSprite(-400, 100);
-                                backdudes.frames = Paths.getSparrowAtlas('YellowBlueGreen');
-                                backdudes.animation.addByPrefix('dance', 'Back instance 1', 24);
-                                backdudes.animation.play('dance');
-                                backdudes.scrollFactor.set(0.9, 0.9);
-                                backdudes.updateHitbox();
-                                add(backdudes);
-                                } else if(ClientPrefs.lowQuality) {
-                                    remove(backdudes); 
-                  
-				                }
-        }
+                for (i in xml)
+                    {
+                        var replaced = i.replace(".xml","");
+                        FlxG.bitmap.add(Paths.image("characters/animation/" + replaced,"shared"));
+                        trace("this is " + replaced);
+                    }
+                #end*/
+                
+                    var bg:BGSprite = new BGSprite('tdl_bg', 0, 0, 1, 1);
+                    bg.screenCenter();
+                    bg.x += 75;
+                    add(bg);
+                case 'animatedbg':
+    
+                    /*var videos = [];
+                    trace("caching images...");
+        
+                    for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/videos/")))
+                    {
+                        if (!i.endsWith(".mp4"))
+                            continue;
+                        videos.push(i);
+                    }
+                    for (i in videos)
+                    {
+                        var replaced = i.replace(".mp4","");
+                        FlxG.bitmap.add(Paths.video("assets/videos/" + replaced,"shared"));
+                        trace("this is " + replaced);
+                    }*/
+    
+                    var animatedbg:FlxSprite = new BGSprite('animatedbg', 620, 330, 0, 0);
+                    animatedbg.scale.set(2.7, 2.7);
+                    //animatedbg.screenCenter();
+                    animatedbg.y -= 350;
+                    animatedbg.x -= 600;
+                    add(animatedbg);
+                    remove(animatedbg);
+                    
+                    var video:MP4Handler = new MP4Handler();
+                    video.playMP4(Paths.video('animatedbg'), null, animatedbg, false, false, true);
+    
+                    if (animatedbgdisable == true)
+                    {
+                        var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
+                        animatedbg.scale.set(1.5, 1.5);
+                        animatedbg.screenCenter();
+                        add(animatedbg);
+                        remove(animatedbg);
+                    }
+    
+                    if(ClientPrefs.lowQuality) {
+                        var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
+                        animatedbg.scale.set(1.5, 1.5);
+                        animatedbg.screenCenter();
+                        add(animatedbg);
+                        remove(animatedbg);
+                    }
+                    
+                    add(animatedbg);
+    
+                    if(!ClientPrefs.lowQuality) {
+                        var backdudes:FlxSprite = new FlxSprite(-400, 100);
+                        backdudes.frames = Paths.getSparrowAtlas('YellowBlueGreen');
+                        backdudes.animation.addByPrefix('dance', 'Back instance 1', 24);
+                        backdudes.animation.play('dance');
+                        backdudes.scrollFactor.set(0.9, 0.9);
+                        backdudes.updateHitbox();
+                        add(backdudes);
+                        } else if(ClientPrefs.lowQuality) {
+                            remove(backdudes);    
+				}
+		}
 
 		if(isPixelStage) {
 			introSoundsSuffix = '-pixel';
@@ -4535,3 +4536,6 @@ class PlayState extends MusicBeatState
 				bfPos[0] = boyfriend.getMidpoint().x - 100 - boyfriend.cameraPosition[0];
 				bfPos[1] = boyfriend.getMidpoint().y - 100 + boyfriend.cameraPosition[1];
 			//bedrock engine my beloved
+		} //not working in 0.4.2 sadly
+	} */
+}
