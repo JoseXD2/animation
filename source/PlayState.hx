@@ -686,7 +686,7 @@ class PlayState extends MusicBeatState
                         trace("this is " + replaced);
                     }
                 #end*/
-                    alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
+                    var alanBG:FlxSprite = new BGSprite('alan_becker_bg', -300,-1280, 1.0, 1.0);
                     add(alanBG);
             case 'tdl':
                         /*#if PRELOAD_ALL			
@@ -741,7 +741,7 @@ class PlayState extends MusicBeatState
                                 trace("this is " + replaced);
                             }*/
             
-                            animatedbg:FlxSprite = new BGSprite('animatedbg', 620, 330, 0, 0);
+                            var animatedbg:FlxSprite = new BGSprite('animatedbg', 620, 330, 0, 0);
                             animatedbg.scale.set(2.7, 2.7);
                             //animatedbg.screenCenter();
                             animatedbg.y -= 350;
@@ -754,7 +754,7 @@ class PlayState extends MusicBeatState
             
                             if (animatedbgdisable == true)
                             {
-                                animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
+                                var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
                                 animatedbg.scale.set(1.5, 1.5);
                                 animatedbg.screenCenter();
                                 add(animatedbg);
@@ -762,7 +762,7 @@ class PlayState extends MusicBeatState
                             }
             
                             if(ClientPrefs.lowQuality) {
-                                animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
+                                var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
                                 animatedbg.scale.set(1.5, 1.5);
                                 animatedbg.screenCenter();
                                 add(animatedbg);
@@ -772,7 +772,7 @@ class PlayState extends MusicBeatState
                             add(animatedbg);
             
                             if(!ClientPrefs.lowQuality) {
-                                backdudes:FlxSprite = new FlxSprite(-400, 100);
+                                var backdudes:FlxSprite = new FlxSprite(-400, 100);
                                 backdudes.frames = Paths.getSparrowAtlas('YellowBlueGreen');
                                 backdudes.animation.addByPrefix('dance', 'Back instance 1', 24);
                                 backdudes.animation.play('dance');
