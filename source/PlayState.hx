@@ -770,7 +770,6 @@ class PlayState extends MusicBeatState
                         add(animatedbg);
                         remove(animatedbg);
                     }
-                    
                     add(animatedbg);
     
                     if(!ClientPrefs.lowQuality) {
