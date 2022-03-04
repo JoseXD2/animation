@@ -751,7 +751,7 @@ class PlayState extends MusicBeatState
                     add(animatedbg);
                     remove(animatedbg);
                     
-                    var video:MP4Handler = new MP4Handler();
+                    var video = new MP4Handler();
                     video.playMP4(Paths.video('animatedbg'), null, animatedbg, false, false, true);
     
                     if (animatedbgdisable == true)
