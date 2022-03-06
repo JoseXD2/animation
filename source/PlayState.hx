@@ -751,17 +751,13 @@ class PlayState extends MusicBeatState
                     add(animatedbg);
                     remove(animatedbg);
                     
-                    var video = new MP4Handler();
-                    video.playMP4(Paths.video('animatedbg'), null, animatedbg, false, false, true);
-    
-                    if (animatedbgdisable == true)
-                    {
-                        var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
-                        animatedbg.scale.set(1.5, 1.5);
-                        animatedbg.screenCenter();
-                        add(animatedbg);
-                        remove(animatedbg);
-                    }
+                    
+                    var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
+                    animatedbg.scale.set(1.5, 1.5);
+                    animatedbg.screenCenter();
+                    add(animatedbg);
+                    remove(animatedbg);
+                    
     
                     if(ClientPrefs.lowQuality) {
                         var animatedbg:FlxSprite = new BGSprite('animatedbg', -500, -500, 0, 0);
@@ -781,7 +777,6 @@ class PlayState extends MusicBeatState
                         backdudes.updateHitbox();
                         add(backdudes);
                         } else if(ClientPrefs.lowQuality) {
-                            remove(backdudes);    
 				}
 		}
 
